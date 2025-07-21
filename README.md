@@ -25,9 +25,9 @@ Adaptive feedback	Cursor hesitation triggers UI simplification	+9 % time‑to�
 
 ### Early pilot outcomes (8‑week run)
 
-+24 % hobbyist trial‑to‑paid conversion
++2 % hobbyist trial‑to‑paid conversion
 
-–30 % median time‑to‑value for power users
+–3 % median time‑to‑value for power users
 
 2× experimentation cadence (bandit auto‑allocates traffic)
 
