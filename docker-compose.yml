@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  classifier:
+    build: ./agent_core
+    command: python server.py
+    ports: ["8000:8000"]
+
+  concierge:
+    build: ./web_demo
+    command: streamlit run app.py --server.port 8501 --server.address 0.0.0.0
+    ports: ["8501:8501"]
