@@ -1,11 +1,15 @@
-version: "3.8"
+# Remove 'version:' to silence the warning if you’d like.
 services:
   classifier:
     build: ./agent_core
-    command: python server.py
-    ports: ["8000:8000"]
+    ports:
+      - "8000:8000"
 
   concierge:
     build: ./web_demo
-    command: streamlit run app.py --server.port 8501 --server.address 0.0.0.0
-    ports: ["8501:8501"]
+    environment:
+      - CLASSIFIER_URL=http://classifier:8000
+    depends_on:
+      - classifier
+    ports:
+      - "8501:8501"
